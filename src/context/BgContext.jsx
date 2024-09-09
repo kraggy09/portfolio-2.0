@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const BgContext = createContext({});
 
 export const BgProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [colorScheme, setColorScheme] = useState({
     bg: "bg-white",
     opacity: "opacity-5",
@@ -16,7 +16,7 @@ export const BgProvider = ({ children }) => {
       let newColorSchema = {
         bg: "bg-white",
         bgopacity: "bg-opacity-10",
-        border: "border-gray-700",
+        border: "border-black",
         text: "text-white",
         color: "gray",
       };

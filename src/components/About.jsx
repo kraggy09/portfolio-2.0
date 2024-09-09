@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <article
-      className={`border ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text} col-span-6 row-span-4 flex px-6 justify-center gap-y-5 flex-col rounded-3xl `}
+      className={`border ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text} col-span-12 xl:col-span-6 row-span-2 xl:row-span-4 flex px-6 justify-center  order-1 gap-y-5 flex-col rounded-3xl `}
       aria-labelledby="intro-header"
       id="about-main"
     >

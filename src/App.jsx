@@ -153,7 +153,7 @@ const App = () => {
       >
         {/* Main Content */}
         <section
-          className="grid grid-cols-12 grid-rows-12 col-span-10 h-full w-full gap-4"
+          className="grid grid-cols-12 grid-rows-14 xl:grid-rows-12 col-span-12   xl:col-span-10 h-full w-full gap-4"
           aria-labelledby="about-section"
         >
           {/* Placeholder Sections */}
@@ -171,7 +171,7 @@ const App = () => {
 
         {/* Sidebar Content */}
         <aside
-          className="grid grid-rows-12 col-span-2 gap-5"
+          className="grid grid-rows-12  xl:col-span-2 col-span-12 gap-5"
           role="complementary"
         >
           {/* Social Icons */}

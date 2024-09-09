@@ -6,7 +6,7 @@ const Resume = () => {
   const { colorScheme } = useContext(BgContext);
   return (
     <section
-      className={`border row-span-5 overflow-hidden rounded-3xl flex flex-col gap-y-4 p-6 ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text}`}
+      className={`border order-2 row-span-5 overflow-hidden rounded-3xl flex flex-col gap-y-4 p-6 ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text}`}
       aria-labelledby="resume-header"
       id="resume"
     >

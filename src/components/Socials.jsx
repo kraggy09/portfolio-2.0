@@ -3,57 +3,55 @@ import { CiLinkedin } from "react-icons/ci";
 import { FiFacebook, FiGithub, FiInstagram, FiTwitter } from "react-icons/fi";
 import { TbBrandLeetcode } from "react-icons/tb";
 import { BgContext } from "../context/BgContext";
+import SocialLink from "./SocialLink.jsx";
+
+const socialMediaLinks = [
+  {
+    href: "https://www.linkedin.com",
+    label: "LinkedIn Profile",
+    Icon: CiLinkedin,
+  },
+  { href: "https://www.github.com", label: "GitHub Profile", Icon: FiGithub },
+  {
+    href: "https://www.leetcode.com",
+    label: "LeetCode Profile",
+    Icon: TbBrandLeetcode,
+  },
+  {
+    href: "https://www.twitter.com",
+    label: "Twitter Profile",
+    Icon: FiTwitter,
+  },
+  {
+    href: "https://www.instagram.com",
+    label: "Instagram Profile",
+    Icon: FiInstagram,
+  },
+  {
+    href: "https://www.facebook.com",
+    label: "Facebook Profile",
+    Icon: FiFacebook,
+  },
+];
 
 const Socials = () => {
   const { colorScheme } = useContext(BgContext);
+
   return (
     <nav
-      className="row-span-3 rounded-3xl gap-4 items-center p-2 grid grid-cols-3 grid-rows-2"
+      className="row-span-3 rounded-3xl gap-4 items-center p-2 grid grid-cols-6 xl:grid-cols-3 xl:grid-rows-2 order-3 xl:order-1"
       aria-label="Social Media Links"
       id="socials"
     >
-      <a
-        href="https://www.linkedin.com"
-        className={`border m-auto p-3 rounded-3xl ${colorScheme.border} ${colorScheme.bg} ${colorScheme.bgopacity} ${colorScheme.text}`}
-        aria-label="LinkedIn Profile"
-      >
-        <CiLinkedin size={40} />
-      </a>
-      <a
-        href="https://www.github.com"
-        className={`border m-auto p-3 rounded-3xl ${colorScheme.border} ${colorScheme.bg} ${colorScheme.bgopacity} ${colorScheme.text}`}
-        aria-label="GitHub Profile"
-      >
-        <FiGithub size={40} />
-      </a>
-      <a
-        href="https://www.leetcode.com"
-        className={`border m-auto p-3 rounded-3xl ${colorScheme.border} ${colorScheme.bg} ${colorScheme.bgopacity} ${colorScheme.text}`}
-        aria-label="LeetCode Profile"
-      >
-        <TbBrandLeetcode size={40} />
-      </a>
-      <a
-        href="https://www.twitter.com"
-        className={`border m-auto p-3 rounded-3xl ${colorScheme.border} ${colorScheme.bg} ${colorScheme.bgopacity} ${colorScheme.text}`}
-        aria-label="Twitter Profile"
-      >
-        <FiTwitter size={40} />
-      </a>
-      <a
-        href="https://www.instagram.com"
-        className={`border m-auto p-3 rounded-3xl ${colorScheme.border} ${colorScheme.bg} ${colorScheme.bgopacity} ${colorScheme.text}`}
-        aria-label="Instagram Profile"
-      >
-        <FiInstagram size={40} />
-      </a>
-      <a
-        href="https://www.facebook.com"
-        className={`border m-auto p-3 rounded-3xl ${colorScheme.border} ${colorScheme.bg} ${colorScheme.bgopacity} ${colorScheme.text}`}
-        aria-label="Facebook Profile"
-      >
-        <FiFacebook size={40} />
-      </a>
+      {socialMediaLinks.map((social) => (
+        <SocialLink
+          key={social.href}
+          href={social.href}
+          label={social.label}
+          Icon={social.Icon}
+          colorScheme={colorScheme}
+        />
+      ))}
     </nav>
   );
 };

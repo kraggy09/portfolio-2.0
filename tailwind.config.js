@@ -6,6 +6,11 @@ export default {
       colors: {
         customWhite: "#ECEDEE",
       },
+      gridTemplateRows: {
+        16: "repeat(16, minmax(0, 1fr))",
+        14: "repeat(14, minmax(0, 1fr))",
+        18: "repeat(18, minmax(0, 1fr))",
+      },
     },
   },
   plugins: [],

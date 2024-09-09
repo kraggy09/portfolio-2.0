@@ -5,7 +5,7 @@ const Random = () => {
   const { colorScheme } = useContext(BgContext);
   return (
     <section
-      className={`border row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text}`}
+      className={`border xl:order-3 order-2 row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text}`}
       aria-labelledby="contact-header"
       id="random"
     >

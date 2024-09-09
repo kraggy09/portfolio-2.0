@@ -6,7 +6,7 @@ const Description = () => {
   return (
     <article
       id="description"
-      className={`border  col-span-5 row-span-4 rounded-3xl flex flex-col p-6  gap-y-4  ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text}`}
+      className={`border  col-span-9 order-3 xl:col-span-5 row-span-2 xl:row-span-4 xl:order-5 rounded-3xl flex flex-col p-6  gap-y-4  ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text}`}
       aria-labelledby="about-header"
     >
       <h2
