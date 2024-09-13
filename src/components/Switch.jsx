@@ -18,18 +18,18 @@ const Switch = () => {
 
   return (
     <div
-      className={`border order-8 col-span-3 xl:col-span-2 row-span-2 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
+      className={`border order-8 col-span-5 md:col-span-3 xl:col-span-2 row-span-2 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
       aria-label="Theme Switcher"
       id="switch"
       ref={switchRef}
     >
       <div
         onClick={() => setIsDarkMode((prev) => !prev)}
-        className="bg-gray-400 flex justify-center px-2 rounded-xl min-w-20 min-h-8 relative overflow-hidden cursor-pointer"
+        className="bg-gray-400 flex justify-center  rounded-xl min-w-20 min-h-8 relative overflow-hidden cursor-pointer"
       >
         <div
           ref={innerRef}
-          className="w-1/2 bg-black rounded-xl h-full absolute top-0 left-0 flex items-center justify-center transition-transform duration-300 ease-in-out"
+          className="w-1/2  bg-black rounded-xl h-full absolute top-0 left-0 flex items-center justify-center transition-transform duration-300 ease-in-out"
         >
           {isDarkMode ? (
             <svg

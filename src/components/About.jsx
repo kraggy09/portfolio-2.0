@@ -11,10 +11,10 @@ const About = () => {
       aria-labelledby="intro-header"
       id="about-main"
     >
-      <h1 id="intro-header" className="text-3xl font-semibold">
+      <h1 id="intro-header" className="md:text-3xl text-xl font-semibold">
         Hi, I’m Kaif Shakh⎯
       </h1>
-      <p className="text-xl text-gray-400">
+      <p className="md:text-xl text-md text-gray-400">
         Full Stack Developer with hands-on experience in creating impactful
         webapps, currently based in Mumbai.
       </p>
