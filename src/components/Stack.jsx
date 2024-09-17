@@ -1,15 +1,44 @@
 import { useContext } from "react";
+
+import Marquee from "react-fast-marquee";
 import { BgContext } from "../context/BgContext";
 
-const Stack = () => {
+const Stack = ({ css }) => {
   const { colorScheme } = useContext(BgContext);
+
+  const stacks = [
+    "/html.png",
+    "/css.png",
+    "/js.png",
+    "/reactjs.png",
+    "/redux.png",
+    "/express.png",
+    "/nodejs.png",
+    "/mongodb.png",
+    "/git.png",
+    "/postman.png",
+  ];
+
   return (
     <div
-      className={`border order-7 col-span-7 md:col-span-9 xl:col-span-4 row-span-2 xl:row-span-4 rounded-3xl flex justify-center items-center  ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text}  ${colorScheme.bgopacity} ${colorScheme.text}`}
+      className={` ${css} relative px-6 overflow-hidden flex-col xl:max-w-[580px] ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
       aria-label="Stack Section"
       id="stack"
     >
-      Stack
+      <h1 className="absolute top-10 left-5 text-3xl font-bold">Stack I Use</h1>
+      <div className="mt-6">
+        <Marquee speed={20}>
+          {/* Displaying the skills */}
+          {stacks.map((skill, index) => (
+            <div
+              key={index}
+              className={`p-2  mx-3   rounded-xl ${colorScheme.bg} ${colorScheme.bgopacity}`}
+            >
+              <img className="h-[50px] " src={skill} alt={`skill-${index}`} />
+            </div>
+          ))}
+        </Marquee>
+      </div>
     </div>
   );
 };

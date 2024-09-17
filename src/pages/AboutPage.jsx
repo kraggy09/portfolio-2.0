@@ -1,4 +1,5 @@
 import Experience from "../components/Experience";
+import Combined from "../components/Combined";
 
 const AboutPage = () => {
   return (
@@ -7,7 +8,7 @@ const AboutPage = () => {
         <div className="my-12   ">X</div>
         <div className="grid gap-x-9 grid-cols-2">
           <Experience />
-          <div>Second</div>
+          <Combined />
         </div>
       </div>
     </div>
