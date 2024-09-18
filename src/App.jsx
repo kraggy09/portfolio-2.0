@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import Home from "./pages/Home";
 import { BgContext } from "./context/BgContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Suspense, lazy } from "react";
 import AboutPage from "./pages/AboutPage";
 gsap.registerPlugin(useGSAP);
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+const Home = lazy(() => import("./pages/Home"));
 
 const App = () => {
   const { isDarkMode } = useContext(BgContext);
@@ -35,7 +36,14 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<>Loading....</>}>
+              <Home />
+            </Suspense>
+          }
+        />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>

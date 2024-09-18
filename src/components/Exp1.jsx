@@ -10,7 +10,7 @@ const Exp1 = () => {
     >
       <header>
         <h1
-          className={`text-3xl py-3 my-3 pr-32 border-b-2 ${colorScheme.border}`}
+          className={`lg:text-3xl text-2xl py-3 my-3 pr-32 border-b-2 ${colorScheme.border}`}
         >
           What I&apos;m About
         </h1>
@@ -23,7 +23,7 @@ const Exp1 = () => {
       </header>
 
       <section>
-        <p className="text-xl max-w-[500px] leading-loose">
+        <p className="lg:text-xl text-lg max-w-[500px] lg:leading-loose leading-loose">
           I am a Full Stack Developer with a strong foundation in
           <span className="font-semibold text-green-500 italic"> MongoDB</span>,
           <span className="font-semibold text-gray-500 italic">
@@ -55,7 +55,7 @@ const Exp1 = () => {
         >
           What I Do Now
         </h2>
-        <p className="text-xl max-w-[500px] leading-loose">
+        <p className="lg:text-xl text-lg max-w-[500px] lg:leading-loose leading-loose">
           I’m focused on <strong>enhancing full-stack solutions</strong> and{" "}
           <strong>automation</strong>, leveraging my skills to drive efficiency
           and innovation. I also develop projects that improve processes and

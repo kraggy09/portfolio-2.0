@@ -1,17 +1,19 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useLayoutEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 export const BgContext = createContext({});
 
 export const BgProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [colorScheme, setColorScheme] = useState({
     bg: "bg-white",
-    opacity: "opacity-5",
-    border: "border-gray-300",
+    bgopacity: "bg-opacity-10",
+    border: "border-black",
+    text: "text-white",
+    color: "gray",
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isDarkMode) {
       let newColorSchema = {
         bg: "bg-white",
