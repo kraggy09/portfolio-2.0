@@ -5,7 +5,7 @@ const ProjectStack = () => {
   const { colorScheme } = useContext(BgContext);
   return (
     <div
-      className={`border pl-6 col-span-1 md:col-span-2 min-w-[350px] lg:col-span-1 relative  flex flex-col gap-y-5 md:gap-y-8 rounded-3xl  ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
+      className={`border py-8 pl-6 order-2 md:order-1 col-span-1 md:col-span-2 lg:col-span-1 relative  flex flex-col gap-y-5 md:gap-y-8 rounded-3xl  ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
     >
       <div className="flex flex-col gap-y-2">
         <h3 className="uppercase text-gray-400 text-sm  tracking-widest">

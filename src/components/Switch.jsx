@@ -18,7 +18,7 @@ const Switch = () => {
 
   return (
     <div
-      className={`border order-8 col-span-5 md:col-span-3 xl:col-span-2 row-span-2 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
+      className={` order-8 col-span-5 md:col-span-3 xl:col-span-2 row-span-2 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
       aria-label="Theme Switcher"
       id="switch"
       ref={switchRef}
