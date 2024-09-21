@@ -16,7 +16,15 @@ const About = () => {
       </h1>
       <p className="md:text-xl text-md text-gray-400">
         Full Stack Developer with hands-on experience in creating impactful
-        webapps, currently based in Mumbai.
+        webapps, working at{" "}
+        <a
+          href="https://www.intervue.io"
+          target="_blank"
+          className="font-semibold underline"
+        >
+          Intervue.io
+        </a>{" "}
+        based in Bangalore
       </p>
     </article>
   );

@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { BgContext } from "../context/BgContext";
+import { useNavigate } from "react-router-dom";
 
 const Project1 = () => {
   const { colorScheme } = useContext(BgContext);
+  const navigate = useNavigate();
   return (
     <div
-      className={`relative border group col-span-12 md:col-span-6 xl:order-2 order-4 xl:col-span-3 md:row-span-3 row-span-2 xl:row-span-4 rounded-3xl flex justify-center items-center overflow-hidden ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
+      onClick={() => {
+        navigate("/work/ai-intervue");
+      }}
+      className={`relative border hover:cursor-pointer group col-span-12 md:col-span-6 xl:order-2 order-4 xl:col-span-3 md:row-span-3 row-span-2 xl:row-span-4 rounded-3xl flex justify-center items-center overflow-hidden ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
       aria-label="Project Placeholder 1"
       id="P1"
     >

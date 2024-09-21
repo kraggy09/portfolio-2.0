@@ -6,6 +6,7 @@ import { Suspense, lazy } from "react";
 import AboutPage from "./pages/AboutPage";
 gsap.registerPlugin(useGSAP);
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Works from "./pages/Works";
 const Home = lazy(() => import("./pages/Home"));
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
           }
         />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/work/:id" element={<Works />} />
       </Routes>
     </Router>
   );

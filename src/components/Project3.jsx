@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { BgContext } from "../context/BgContext";
+import { useNavigate } from "react-router-dom";
 
 const Project3 = () => {
   const { colorScheme } = useContext(BgContext);
+  const navigate = useNavigate();
   return (
     <div
-      className={`relative overflow-hidden border col-span-12 order-6 group xl:col-span-4 row-span-2 md:row-span-3 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
+      onClick={() => {
+        navigate("/work/instant-ref");
+      }}
+      className={`relative hover:cursor-pointer overflow-hidden border col-span-12 order-6 group xl:col-span-4 row-span-2 md:row-span-3 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
       aria-label="Project Placeholder 3"
       id="P3"
     >

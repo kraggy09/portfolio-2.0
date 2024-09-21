@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { BgContext } from "../context/BgContext";
+import { useNavigate } from "react-router-dom";
 
 const Project2 = () => {
   const { colorScheme } = useContext(BgContext);
+  const navigate = useNavigate();
   return (
     <div
-      className={`border order-5 relative group col-span-12 md:col-span-6 xl:order-3 xl:col-span-3 row-span-2 md:row-span-3 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
+      onClick={() => {
+        navigate("/work/doctorly");
+      }}
+      className={`border hover:cursor-pointer order-5 relative group col-span-12 md:col-span-6 xl:order-3 xl:col-span-3 row-span-2 md:row-span-3 xl:row-span-4 rounded-3xl flex justify-center items-center ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} ${colorScheme.text}`}
       aria-label="Project Placeholder 2"
       id="P2"
     >
