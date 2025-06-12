@@ -7,6 +7,7 @@ import AboutPage from "./pages/AboutPage";
 gsap.registerPlugin(useGSAP);
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Works from "./pages/Works";
+import ProfessionalJourney from "./pages/ProfessionalJourney";
 const Home = lazy(() => import("./pages/Home"));
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
         />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/work/:id" element={<Works />} />
+        <Route path="/professional-journey" element={<ProfessionalJourney />} />
       </Routes>
     </Router>
   );

@@ -1,16 +1,25 @@
 import { useContext } from "react";
 import { BgContext } from "../context/BgContext";
+import { useNavigate } from "react-router-dom";
+import { CgArrowTopRight } from "react-icons/cg";
 
 const Exp2 = () => {
   const { colorScheme } = useContext(BgContext);
+  const navigate = useNavigate();
 
   const experiences = [
+    {
+      company: "Memowries",
+      role: "Chief Technology Officer",
+      website: "https://www.memowries.com",
+      start: "Current",
+    },
     {
       company: "Intervue.io",
       role: "Software Dev Intern",
       website: "https://www.intervue.io",
-      start: "Current",
-      end: "",
+      start: "Oct'24",
+      end: "Jun'25",
     },
     {
       company: "Simco Consultancy",
@@ -30,7 +39,10 @@ const Exp2 = () => {
 
   return (
     <div
-      className={`relative row-span-2 border px-8 col-span-1 py-8 rounded-3xl overflow-hidden ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
+      className={`relative row-span-2 border px-8 col-span-1 py-8 rounded-3xl overflow-hidden ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity} group`}
+      onClick={() => navigate("/professional-journey")}
+      style={{ cursor: "pointer" }}
+      title="Click to view detailed professional journey"
     >
       <h2 className="uppercase text-gray-400 text-sm py-3 tracking-widest">
         Experience
@@ -48,6 +60,7 @@ const Exp2 = () => {
                   href={exp.website}
                   target="_blank"
                   className="border-b-2  font-semibold"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   {exp.company}
                 </a>
@@ -60,6 +73,10 @@ const Exp2 = () => {
             </p>
           </div>
         ))}
+      </div>
+      {/* Right-pointing arrow indicator */}
+      <div className="absolute right-4 top-4 border rounded-full p-1 transition-transform ease-in-out duration-300  group-hover:scale-125 hover:cursor-pointer">
+        <CgArrowTopRight className="sm:w-8 sm:h-8 w-5 h-5" />
       </div>
     </div>
   );

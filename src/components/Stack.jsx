@@ -22,7 +22,7 @@ const Stack = ({ css }) => {
 
   return (
     <div
-      className={` ${css} relative px-6 overflow-hidden flex-col xl:max-w-[580px] ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
+      className={` ${css} relative px-6 overflow-hidden flex-col  ${colorScheme.border} ${colorScheme.bg} ${colorScheme.text} ${colorScheme.bgopacity}`}
       aria-label="Stack Section"
       id="stack"
     >

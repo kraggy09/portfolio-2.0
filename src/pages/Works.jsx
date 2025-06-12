@@ -3,11 +3,14 @@ import ProjectStack from "../components/ProjectStack";
 import ProjectDesc from "../components/ProjectDesc";
 import { useContext } from "react";
 import { BgContext } from "../context/BgContext";
+import { useNavigate } from "react-router-dom";
 
 const Works = () => {
   const { colorScheme } = useContext(BgContext);
   const location = useLocation();
   const { state } = location;
+  const navigate = useNavigate();
+
   console.log(state);
 
   return (
@@ -17,7 +20,27 @@ const Works = () => {
           ${colorScheme.border} ${colorScheme.text} ${colorScheme.text}`}
     >
       <article className="relative h-full flex items-center justify-start flex-col w-full gap-4 border-2 border-gray-400 rounded-3xl min-h-[95vh] p-2 lg:p-5">
-        <div className="my-12 ">X</div>
+        {/* Close Button */}
+        <button
+          onClick={() => navigate("/")}
+          className="absolute top-6 left-1/2 transform -translate-x-1/2 p-2 rounded-full bg-gray-800/50 hover:bg-gray-700/70 text-white transition-colors duration-300 z-10"
+          aria-label="Close work details page"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
         <section className="grid grid-cols-1 gap-y-9 md:max-w-[90vw] lg:max-w-[80vw] xl:max-w-[70vw]">
           <div className="grid lg:gap-x-9 gap-y-6 md:gap-y-0 gap-x-12 md:grid-cols-5 lg:grid-cols-3">
             <header className="md:col-span-5 lg:col-span-3 md:my-6">
